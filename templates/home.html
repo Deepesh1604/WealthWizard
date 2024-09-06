@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .slide-in {
+      animation: slideIn 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-200 to-blue-500 min-h-screen flex items-center justify-center">
+
+  <!-- Main container covering full screen -->
+  <div class="w-full h-full flex items-center justify-center p-8">
+    <div class="w-full max-w-5xl h-full bg-white shadow-lg rounded-lg flex flex-col justify-between fade-in">
+
+      <!-- Header Section with animated welcome text -->
+      <div class="p-8 bg-blue-600 text-white rounded-t-lg">
+        <h1 class="text-4xl font-bold slide-in">Welcome to Financial Chatbot</h1>
+        <p class="mt-2 text-lg slide-in">How can we help you achieve your financial goals today?</p>
+      </div>
+
+      <!-- Chatbox section that adjusts with the viewport height -->
+      <div class="flex-1 p-8 overflow-y-auto bg-gray-50 rounded-b-lg">
+        <!-- Bot message -->
+        <div class="flex items-start mb-4">
+          <span class="block bg-blue-600 text-white p-2 rounded-full text-sm">Bot</span>
+          <p class="ml-4 bg-blue-100 p-4 rounded-lg shadow text-sm">
+            Welcome to Financial Chat. How are you feeling today?
+          </p>
+        </div>
+
+        <!-- User message -->
+        <div class="flex items-start justify-end mb-4">
+          <p class="mr-4 bg-blue-200 p-4 rounded-lg shadow text-sm">
+            I've been feeling a bit overwhelmed lately.
+          </p>
+          <span class="block bg-blue-600 text-white p-2 rounded-full text-sm">You</span>
+        </div>
+      </div>
+
+      <!-- Input section with Send button -->
+      <div class="flex items-center bg-white p-6 border-t border-gray-200">
+        <input
+          type="text"
+          class="flex-1 p-4 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
+          placeholder="Share your thoughts..." />
+        <button
+          class="bg-blue-600 text-white px-6 py-4 rounded-r-lg hover:bg-blue-700 transition-all duration-300">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
