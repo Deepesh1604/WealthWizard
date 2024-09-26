@@ -1,1 +1,1 @@
-# **WealthWizard.**
+# **WealthWizard**
